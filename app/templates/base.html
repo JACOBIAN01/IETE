@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+     {%block title%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/NewLogo.jpeg') }}">
+    {%endblock%}
+  </head>
+  <body>
+ <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <img src="{{ url_for('static', filename='images/Header.png') }}" alt="Top Image" class="top-image">
+    </nav>
+
+    <!-- Bottom Navbar -->
+    <nav class="bottom-navbar">
+        <a href="#" class="bottom-navbar-brand">
+            <img src="{{ url_for('static', filename='images/NewLogo.jpeg') }}" alt="Logo" class="bottom-logo">
+        </a>
+        <ul class="bottom-nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('event') }}">Events</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+        </ul>
+    </nav>
+
+
+    {% block content %}
+
+    {% endblock %}
+<script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+  </body>
+ 
+</html>

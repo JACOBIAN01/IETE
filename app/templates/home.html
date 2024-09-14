@@ -1,0 +1,16 @@
+<title>IETE HOME</title>
+{%extends 'base.html'%} 
+
+{% block content %}
+ <!-- Carousel Container -->
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="{{ url_for('static', filename='images/Event1.jpeg') }}" alt="Image 1" class="carousel-image">
+        <img src="{{ url_for('static', filename='images/Event3.jpg') }}" alt="Image 2" class="carousel-image">
+        <img src="{{ url_for('static', filename='images/Event2.jpg') }}" alt="Image 3" class="carousel-image">
+    </div>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+<script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+{% endblock %}
